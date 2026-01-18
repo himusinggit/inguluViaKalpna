@@ -53,7 +53,7 @@ gsap.from("#inglu-text .word", {
     { innerText: 0 }, 
     {
       innerText: target,
-      duration: 2,
+      duration: 1.3,
       ease: "power1.out",
       snap: { innerText: 1 },
       scrollTrigger: {
