@@ -25,17 +25,24 @@ gsap.registerPlugin(ScrollTrigger);
     ease: "power3.out",
   });
 
-  gsap.from("#inglu-text", {
-    scrollTrigger: {
-      trigger: "#inglu-section",
-      start: "top 25%",
-    },
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    delay: 0.3,
-    ease: "power3.out"
-  });
+// Split text into words
+const textEl = document.querySelector("#inglu-text");
+const words = textEl.innerText.split(" ");
+textEl.innerHTML = words.map(word => `<span class="word  mr-2">${word}</span>`).join(" ");
+
+// Animate each word with stagger
+gsap.from("#inglu-text .word", {
+  scrollTrigger: {
+    trigger: "#inglu-section",
+    start: "top 25%",
+  },
+  y: 50,
+  opacity: 0,
+  filter: "blur(10px)",
+  duration: 1.2,
+  ease: "power3.out",
+  stagger: 0.2
+});
 
 
   //counter animation
@@ -60,32 +67,6 @@ gsap.registerPlugin(ScrollTrigger);
   );
 });
 
-// gsap.utils.toArray(".inglu-card").forEach((card) => {
-//   gsap.timeline({
-//     scrollTrigger: {
-//       trigger: card,
-//       start: "top center",
-//       end: "bottom center",
-//       scrub: true,
-//       markers: true
-//     }
-//   })
-//   .fromTo(card, 
-//     { scale: 0.8, boxShadow: "0 0 0px rgba(59,130,246,0)" }, 
-//     { 
-//       scale: 1.1, 
-//       boxShadow: "0 0 60px rgba(59,130,246,0.4)", 
-//       ease: "power2.out" 
-//     }
-//   )
-//   .to(card, 
-//     { 
-//       scale: 0.8, 
-//       boxShadow: "0 0 0px rgba(59,130,246,0)", 
-//       ease: "power2.in" 
-//     }
-//   );
-// });
 
   gsap.utils.toArray(".inglu-card").forEach((card) => {
     gsap.from(card, {

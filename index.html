@@ -7,6 +7,28 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>inguluviakalpna</title>
   </head>
+  <style>
+      .card {
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+  }
+  .card:hover {
+    transform: rotateY(15deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  }
+
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glow {
+    box-shadow: 0 0 40px rgba(59,130,246,0.4);
+  }
+  </style>
   <body bgcolor=" #0E0637">
     <div class="relative min-h-screen overflow-hidden">
 
@@ -76,15 +98,15 @@
 
       </div>
     </div>
-<div id="inglu-section" class="w-full h-screen flex items-center justify-center bg-[#0E0637] text-white px-6">
+<div id="inglu-section" class="w-full h-[90vh] flex items-center justify-center bg-[#0E0637] text-white px-6">
   <div class="max-w-4xl text-center">
     
     <h1 id="inglu-title" class="text-4xl md:text-6xl font-bold mb-6 uppercase tracking-wider">
       What is INGLU?
     </h1>
 
-    <p id="inglu-text" class="text-lg md:text-xl text-gray-300 leading-relaxed">
-      INGLU is one of the <span class="text-white font-semibold">“FASTEST GROWING GLOBAL YOUTH COMMUNITIES”</span> 
+    <p id="inglu-text" class="text-sm md:text-xl text-gray-300 leading-relaxed">
+      INGLU is one of the <span class="text-white font-semibold"><b>“FASTEST GROWING GLOBAL YOUTH COMMUNITIES”</b></span> 
       that helps youth in holistic development of experience by working on the 
       <span class="text-white font-semibold">E3 Model</span>, which states that 
       <span class="text-blue-400 font-semibold">Experience</span> is a combination of 
@@ -95,6 +117,14 @@
 
   </div>
 </div>
+
+<div class="flex items-center justify-center bg-transparent my-20 -mt-10">
+  <h1 class="text-[8vw] font-extrabold text-white tracking-wide">
+    The 3E Model
+  </h1>
+</div>
+
+
 <div class="w-full min-h-[30vh] bg-[#0E0637] flex items-center justify-center px-6">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl px-6 w-full">
 
@@ -256,7 +286,7 @@
 
     <!-- Card 5 -->
     <div class="inglu-card bg-gradient-to-br from-[#1A1A1A] via-[#111827] to-[#0F172A] rounded-2xl overflow-hidden border border-white/10 shadow-xl transition">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjwjwDzXYwMGvx457JU4oc_6sw8vtbuSUORA&s" class="w-full h-56 object-cover">
+      <img src="https://plus.unsplash.com/premium_photo-1682124520375-043c5a16acd9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZXNwb3J0c3xlbnwwfHwwfHx8MA%3D%3D" class="w-full h-56 object-cover">
       <div class="p-6">
         <h2 class="text-2xl font-bold text-white mb-2">INGLU E-SPORTS</h2>
         <p class="text-gray-300">
@@ -268,6 +298,61 @@
 
   </div>
 </div>
+
+
+<div class="flex justify-center items-center px-4">
+<section class="relative w-full max-w-6xl text-center py-24">
+  <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-12 tracking-wide">
+    What people say about us
+  </h2>
+
+  <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-center perspective-[1500px]">
+
+    <!-- Card 1 -->
+    <div class="card float bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 sm:p-8 w-full sm:w-[22rem] text-center glow">
+      <img src="https://randomuser.me/api/portraits/women/65.jpg"
+           class="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto border-4 border-blue-500 mb-4">
+      <p class="text-gray-200 italic text-sm sm:text-base">
+        “The seniors were very polite and easy to work with....have had spend a wonderful time ....”
+      </p>
+      <div class="mt-4 text-yellow-400 text-lg sm:text-xl">★★★★★</div>
+      <h4 class="mt-2 text-white font-semibold">Sophia Lin</h4>
+      <span class="text-sm text-gray-400">Product Designer</span>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card float bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 sm:p-8 w-full sm:w-[22rem] text-center glow lg:mt-10" style="animation-delay:1s">
+      <img src="https://randomuser.me/api/portraits/men/45.jpg"
+           class="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto border-4 border-purple-500 mb-4">
+      <p class="text-gray-200 italic text-sm sm:text-base">
+        “Working in Inglu as an intern was really a good experience, gained a lot of new things to learn. I enjoyed this internship”
+      </p>
+      <div class="mt-4 text-yellow-400 text-lg sm:text-xl">★★★★★</div>
+      <h4 class="mt-2 text-white font-semibold">Arjun Patel</h4>
+      <span class="text-sm text-gray-400">Frontend Engineer</span>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card float bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 sm:p-8 w-full sm:w-[22rem] text-center glow" style="animation-delay:2s">
+      <img src="https://randomuser.me/api/portraits/women/12.jpg"
+           class="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto border-4 border-pink-500 mb-4">
+      <p class="text-gray-200 italic text-sm sm:text-base">
+        “The seniors were very polite and easy to work with....have had spend a wonderful time ....”
+      </p>
+      <div class="mt-4 text-yellow-400 text-lg sm:text-xl">★★★★★</div>
+      <h4 class="mt-2 text-white font-semibold">Emily Carter</h4>
+      <span class="text-sm text-gray-400">Startup Founder</span>
+    </div>
+
+  </div>
+
+  <!-- Ambient glow orbs -->
+  <div class="absolute top-10 left-1/4 w-48 sm:w-72 h-48 sm:h-72 bg-blue-600/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-10 right-1/4 w-48 sm:w-72 h-48 sm:h-72 bg-purple-600/20 rounded-full blur-3xl"></div>
+</section>
+</div>
+
+
 
 <section class="w-full min-h-screen bg-gradient-to-br from-[#0E0637] to-[#1B0F63] flex items-center justify-center px-6">
   <div class="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center">
@@ -398,13 +483,16 @@
   </div>
 
   <!-- WhatsApp Help Button -->
-  <a href="https://wa.me/917827808413" target="_blank"
-     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-full shadow-lg flex items-center space-x-2 transition">
-    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20.52 3.484a11.868 11.868 0 0 0-16.744 0 11.868 11.868 0 0 0 0 16.743L3 21l4.793-1.256a11.868 11.868 0 0 0 16.743-16.744zm-8.557 15.217c-2.457 0-4.749-.798-6.61-2.138l-.472-.34-2.85.747.76-2.777-.31-.452a8.894 8.894 0 0 1 12.03-12.03c4.1 4.1 3.674 10.836-1.158 13.01-.946.45-1.888.67-2.39.67zm4.553-5.607c-.251-.126-1.48-.73-1.711-.813-.23-.084-.398-.126-.565.127-.167.253-.644.813-.787.98-.144.168-.288.188-.539.063-.251-.125-1.056-.388-2.012-1.24-.744-.662-1.246-1.478-1.392-1.73-.145-.251-.015-.386.11-.511.113-.112.25-.288.376-.432.126-.145.168-.25.251-.417.084-.167.042-.313-.021-.438-.063-.126-.565-1.36-.774-1.86-.204-.487-.412-.42-.565-.428-.146-.007-.313-.008-.479-.008-.167 0-.438.063-.668.313-.23.251-.875.854-.875 2.082 0 1.227.896 2.413 1.02 2.582.126.168 1.763 2.69 4.27 3.77.597.257 1.062.411 1.426.525.599.191 1.143.164 1.574.099.48-.07 1.48-.604 1.689-1.187.21-.584.21-1.084.146-1.187-.063-.104-.23-.167-.48-.293z"/>
-    </svg>
-    <span>How can I help you?</span>
-  </a>
+<a href="https://wa.me/917827808413" target="_blank"
+   class="hidden md:flex fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-full shadow-lg items-center space-x-2 transition z-50">
+  
+  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20.52 3.484a11.868 11.868 0 0 0-16.744 0 11.868 11.868 0 0 0 0 16.743L3 21l4.793-1.256a11.868 11.868 0 0 0 16.743-16.744zm-8.557 15.217c-2.457 0-4.749-.798-6.61-2.138l-.472-.34-2.85.747.76-2.777-.31-.452a8.894 8.894 0 0 1 12.03-12.03c4.1 4.1 3.674 10.836-1.158 13.01-.946.45-1.888.67-2.39.67zm4.553-5.607c-.251-.126-1.48-.73-1.711-.813-.23-.084-.398-.126-.565.127-.167.253-.644.813-.787.98-.144.168-.288.188-.539.063-.251-.125-1.056-.388-2.012-1.24-.744-.662-1.246-1.478-1.392-1.73-.145-.251-.015-.386.11-.511.113-.112.25-.288.376-.432.126-.145.168-.25.251-.417.084-.167.042-.313-.021-.438-.063-.126-.565-1.36-.774-1.86-.204-.487-.412-.42-.565-.428-.146-.007-.313-.008-.479-.008-.167 0-.438.063-.668.313-.23.251-.875.854-.875 2.082 0 1.227.896 2.413 1.02 2.582.126.168 1.763 2.69 4.27 3.77.597.257 1.062.411 1.426.525.599.191 1.143.164 1.574.099.48-.07 1.48-.604 1.689-1.187.21-.584.21-1.084.146-1.187-.063-.104-.23-.167-.48-.293z"/>
+  </svg>
+
+  <span>How can I help you?</span>
+</a>
+
 </footer>
 
     <script>
