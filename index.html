@@ -4,10 +4,418 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>inguluviakalpna</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body bgcolor=" #0E0637">
+    <div class="relative min-h-screen overflow-hidden">
+
+      <!-- Background Video -->
+      <video
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="./public/eklota.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Dark Overlay -->
+      <div class="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
+
+      <!-- Content Wrapper -->
+      <div class="relative z-20">
+
+        <nav class="bg-gray-900/70 backdrop-blur text-white px-6 py-4 absolute w-full top-0 left-0">
+          <div class="flex items-center justify-between">
+            
+            <div class="text-2xl font-bold"><img src="https://i0.wp.com/ingluglobal.in/wp-content/uploads/2024/02/Untitled-1.png?w=1200&ssl=1" class="w-17" alt=""></div>
+
+            <ul class="hidden md:flex space-x-10 text-[18px]">
+              <li class="hover:text-blue-400 cursor-pointer">Home</li>
+              <li class="hover:text-blue-400 cursor-pointer">Inglu Membership</li>
+              <li class="hover:text-blue-400 cursor-pointer">Shop</li>
+              <li class="hover:text-blue-400 cursor-pointer">Carriers</li>
+              <li class="hover:text-blue-400 cursor-pointer">Contact</li>
+            </ul>
+
+            <button class="hidden md:block bg-blue-500 hover:bg-blue-600 px-5 py-2 rounded-lg">
+              Login
+            </button>
+
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+
+          <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4">
+            <a class="block hover:text-blue-400">Home</a>
+            <a class="block hover:text-blue-400">Inglu Membership</a>
+            <a class="block hover:text-blue-400">Shop</a>
+            <a class="block hover:text-blue-400">Carriers</a>
+            <a class="block hover:text-blue-400">Contact</a>
+            <button class="w-full bg-blue-500 hover:bg-blue-600 py-2 rounded-lg">
+              Login
+            </button>
+          </div>
+        </nav>
+
+        <section class="min-h-screen flex flex-col items-center justify-center text-white text-center">
+          <h1 class="text-6xl md:text-8xl font-extrabold tracking-widest">
+            INGLU
+          </h1>
+
+          <p class="mt-4 text-lg md:text-2xl text-gray-300 tracking-wide">
+            FASTEST GROWING GLOBAL YOUTH COMMUNITY
+          </p>
+        </section>
+
+      </div>
+    </div>
+<div id="inglu-section" class="w-full h-screen flex items-center justify-center bg-[#0E0637] text-white px-6">
+  <div class="max-w-4xl text-center">
+    
+    <h1 id="inglu-title" class="text-4xl md:text-6xl font-bold mb-6 uppercase tracking-wider">
+      What is INGLU?
+    </h1>
+
+    <p id="inglu-text" class="text-lg md:text-xl text-gray-300 leading-relaxed">
+      INGLU is one of the <span class="text-white font-semibold">“FASTEST GROWING GLOBAL YOUTH COMMUNITIES”</span> 
+      that helps youth in holistic development of experience by working on the 
+      <span class="text-white font-semibold">E3 Model</span>, which states that 
+      <span class="text-blue-400 font-semibold">Experience</span> is a combination of 
+      <span class="text-blue-400 font-semibold">Education</span>, 
+      <span class="text-blue-400 font-semibold">Enhancement</span>, and 
+      <span class="text-blue-400 font-semibold">Entertainment</span>.
+    </p>
+
+  </div>
+</div>
+<div class="w-full min-h-[30vh] bg-[#0E0637] flex items-center justify-center px-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl px-6 w-full">
+
+    <!-- Card 1 -->
+    <div class="bg-[#1B0F63] rounded-3xl p-8 text-white shadow-xl 
+                h-[480px] flex flex-col justify-between
+                transition-all duration-300 ease-out
+                hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30">
+      <div>
+        <h3 class="text-3xl font-bold mb-4 text-white">Education</h3>
+        <p class="text-gray-300 mb-4">
+          Learn through structured programs designed by industry experts.
+        </p>
+        <ul class="text-gray-400 text-sm space-y-2">
+          <li>• Live workshops & masterclasses</li>
+          <li>• Internship & certification programs</li>
+          <li>• Practical project-based learning</li>
+          <li>• Mentorship from professionals</li>
+        </ul>
+      </div>
+      <span class="text-white font-semibold">Explore →</span>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-[#1B0F63] rounded-3xl p-8 text-white shadow-xl 
+                h-[480px] flex flex-col justify-between
+                transition-all duration-300 ease-out
+                hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30">
+      <div>
+        <h3 class="text-3xl font-bold mb-4 text-white">Enhancement</h3>
+        <p class="text-gray-300 mb-4">
+          Develop personality, leadership, and professional skills.
+        </p>
+        <ul class="text-gray-400 text-sm space-y-2">
+          <li>• Communication & confidence building</li>
+          <li>• Leadership & teamwork training</li>
+          <li>• Personal branding & resume growth</li>
+          <li>• Career guidance & networking</li>
+        </ul>
+      </div>
+      <span class="text-white font-semibold">Explore →</span>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-[#1B0F63] rounded-3xl p-8 text-white shadow-xl 
+                h-[480px] flex flex-col justify-between
+                transition-all duration-300 ease-out
+                hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/30">
+      <div>
+        <h3 class="text-3xl font-bold mb-4 text-white">Entertainment</h3>
+        <p class="text-gray-300 mb-4">
+          Enjoy learning with fun, engagement, and community bonding.
+        </p>
+        <ul class="text-gray-400 text-lg space-y-2">
+          <li>• Youth festivals & meetups</li>
+          <li>• Hackathons & competitions</li>
+          <li>• Cultural & social events</li>
+          <li>• Travel, fun activities & networking</li>
+        </ul>
+      </div>
+      <span class="text-white font-semibold">Explore →</span>
+    </div>
+
+  </div>
+</div>
+<section id="counter-section" class="w-full min-h-[50vh] bg-[#0E0637] flex items-center justify-center text-white">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+
+    <div>
+      <div class="flex items-center justify-center gap-2">
+        <h2 class="counter text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold" data-target="5">0</h2>
+        <span class="text-blue-400 text-xl sm:text-2xl">+</span>
+      </div>
+      <p class="mt-2 text-gray-300">Countries</p>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-center gap-2">
+        <h2 class="counter text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold" data-target="100000">0</h2>
+        <span class="text-blue-400 text-xl sm:text-2xl">+</span>
+      </div>
+      <p class="mt-2 text-gray-300">Youth Impacted</p>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-center gap-2">
+        <h2 class="counter text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold" data-target="1000">0</h2>
+        <span class="text-blue-400 text-xl sm:text-2xl">+</span>
+      </div>
+      <p class="mt-2 text-gray-300">Collaborations</p>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-center gap-2">
+        <h2 class="counter text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold" data-target="1000">0</h2>
+        <span class="text-blue-400 text-xl sm:text-2xl">+</span>
+      </div>
+      <p class="mt-2 text-gray-300">Events Curated</p>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="relative w-full min-h-screen bg-[#0E0637] overflow-hidden py-20">
+
+  <!-- Decorative Background Images -->
+
+  <!-- Cards Wrapper -->
+  <div class="relative max-w-4xl mx-auto space-y-8 px-4 sm:px-6">
+
+    <!-- Card 1 -->
+    <div class="inglu-card bg-gradient-to-br from-[#1A1A1A] via-[#111827] to-[#0F172A] rounded-2xl overflow-hidden border border-white/10 shadow-xl transition">
+      <img src="https://www.avanse.com/blogs/images/10feb-blog-2023.webp" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h2 class="text-2xl font-bold text-white mb-2">INGLU EDUCATION</h2>
+        <p class="text-gray-300">
+          The segment focuses on the educational development of youth through mentorship,
+          workshops, real-world exposure, leadership programs and skill-building initiatives.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="inglu-card bg-gradient-to-br from-[#1A1A1A] via-[#111827] to-[#0F172A] rounded-2xl overflow-hidden border border-white/10 shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h2 class="text-2xl font-bold text-white mb-2">INGLU TRAVELS</h2>
+        <p class="text-gray-300">
+          Curating unique youth travel experiences, adventure trips, cultural explorations
+          and learning tours that build confidence and global exposure.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="inglu-card bg-gradient-to-br from-[#1A1A1A] via-[#111827] to-[#0F172A] rounded-2xl overflow-hidden border border-white/10 shadow-xl transition">
+      <img src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h2 class="text-2xl font-bold text-white mb-2">INGLU EVENTS</h2>
+        <p class="text-gray-300">
+          From artist management to production, sponsorships, security and marketing,
+          we curate and execute large-scale youth-driven experiences.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="inglu-card bg-gradient-to-br from-[#1A1A1A] via-[#111827] to-[#0F172A] rounded-2xl overflow-hidden border border-white/10 shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h2 class="text-2xl font-bold text-white mb-2">INGLU MERCHANDISE</h2>
+        <p class="text-gray-300">
+          A premium youth lifestyle brand delivering trendy apparel, accessories and
+          community-driven fashion culture.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="inglu-card bg-gradient-to-br from-[#1A1A1A] via-[#111827] to-[#0F172A] rounded-2xl overflow-hidden border border-white/10 shadow-xl transition">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjwjwDzXYwMGvx457JU4oc_6sw8vtbuSUORA&s" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h2 class="text-2xl font-bold text-white mb-2">INGLU E-SPORTS</h2>
+        <p class="text-gray-300">
+          Building elite BGMI and competitive gaming teams with professional training,
+          branding, tournament exposure and performance management.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="w-full min-h-screen bg-gradient-to-br from-[#0E0637] to-[#1B0F63] flex items-center justify-center px-6">
+  <div class="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Left Image / Illustration -->
+    <div class="flex justify-center md:justify-end">
+      <img src="https://i0.wp.com/ingluglobal.in/wp-content/uploads/2023/11/7-Johny-Playing-VR-1-1.png?w=911&ssl=1" 
+           alt="Illustration"
+           class="w-full max-w-sm rounded-2xl shadow-2xl">
+    </div>
+
+    <!-- Contact Form -->
+    <div class="bg-[#0F172A]/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-2xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Contact Us</h2>
+
+      <form class="space-y-6">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-white font-semibold text-sm mb-1 block">Name <span class="text-red-500">*</span></label>
+            <input type="text" placeholder="Name" class="w-full px-4 py-3 rounded-lg bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="text-white font-semibold text-sm mb-1 block">Contact</label>
+            <input type="text" placeholder="Contact" class="w-full px-4 py-3 rounded-lg bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-white font-semibold text-sm mb-1 block">Email Address <span class="text-red-500">*</span></label>
+            <input type="email" placeholder="Add email" class="w-full px-4 py-3 rounded-lg bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="text-white font-semibold text-sm mb-1 block">Select Reason</label>
+            <select class="w-full px-4 py-3 rounded-lg bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option>Select</option>
+              <option>General Inquiry</option>
+              <option>Support</option>
+              <option>Collaboration</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="text-white font-semibold text-sm mb-1 block">Enter Your Message <span class="text-red-500">*</span></label>
+          <textarea placeholder="Enter Your Message" class="w-full px-4 py-3 rounded-lg bg-white/90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"></textarea>
+        </div>
+
+        <!-- reCAPTCHA Placeholder -->
+        <div class="mt-2">
+          <div class="bg-white rounded-lg flex items-center px-4 py-2">
+            <input type="checkbox" class="mr-2">
+            <span class="text-gray-800 text-sm">I'm not a robot</span>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg mt-4 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="bg-[#3B0DAE] text-white relative">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- Logo + Description + Socials -->
+    <div class="space-y-4">
+      <img src="https://i0.wp.com/ingluglobal.in/wp-content/uploads/2024/02/Untitled-1.png?w=1200&ssl=1"  salt="INGLU Logo" class="w-18">
+      <p class="text-sm md:text-base font-semibold">
+        INGLU Is One Of The Fastest Growing Global Youth Community
+      </p>
+      <!-- <div class="flex space-x-3 mt-2">
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#3B0DAE] hover:bg-gray-200 transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#3B0DAE] hover:bg-gray-200 transition">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#3B0DAE] hover:bg-gray-200 transition">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#3B0DAE] hover:bg-gray-200 transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div> -->
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="font-bold text-lg mb-4">Quick Link</h3>
+      <ul class="space-y-2 text-gray-200">
+        <li><a href="#" class="hover:text-white">Home</a></li>
+        <li><a href="#" class="hover:text-white">About</a></li>
+        <li><a href="#" class="hover:text-white">Careers</a></li>
+        <li><a href="#" class="hover:text-white">Shop</a></li>
+        <li><a href="#" class="hover:text-white">Blog</a></li>
+        <li><a href="#" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Support -->
+    <div>
+      <h3 class="font-bold text-lg mb-4">Support</h3>
+      <ul class="space-y-2 text-gray-200">
+        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-white">Term & Condition</a></li>
+        <li><a href="#" class="hover:text-white">Disclaimer</a></li>
+        <li><a href="#" class="hover:text-white">Support</a></li>
+        <li><a href="#" class="hover:text-white">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h3 class="font-bold text-lg mb-4">Contact</h3>
+      <ul class="space-y-2 text-gray-200 text-sm">
+        <li>info@ingluglobal.in</li>
+        <li>+91 7827808413</li>
+        <li>82, SatyaNiketan, First Floor, New Delhi - 110021</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- WhatsApp Help Button -->
+  <a href="https://wa.me/917827808413" target="_blank"
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-full shadow-lg flex items-center space-x-2 transition">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.484a11.868 11.868 0 0 0-16.744 0 11.868 11.868 0 0 0 0 16.743L3 21l4.793-1.256a11.868 11.868 0 0 0 16.743-16.744zm-8.557 15.217c-2.457 0-4.749-.798-6.61-2.138l-.472-.34-2.85.747.76-2.777-.31-.452a8.894 8.894 0 0 1 12.03-12.03c4.1 4.1 3.674 10.836-1.158 13.01-.946.45-1.888.67-2.39.67zm4.553-5.607c-.251-.126-1.48-.73-1.711-.813-.23-.084-.398-.126-.565.127-.167.253-.644.813-.787.98-.144.168-.288.188-.539.063-.251-.125-1.056-.388-2.012-1.24-.744-.662-1.246-1.478-1.392-1.73-.145-.251-.015-.386.11-.511.113-.112.25-.288.376-.432.126-.145.168-.25.251-.417.084-.167.042-.313-.021-.438-.063-.126-.565-1.36-.774-1.86-.204-.487-.412-.42-.565-.428-.146-.007-.313-.008-.479-.008-.167 0-.438.063-.668.313-.23.251-.875.854-.875 2.082 0 1.227.896 2.413 1.02 2.582.126.168 1.763 2.69 4.27 3.77.597.257 1.062.411 1.426.525.599.191 1.143.164 1.574.099.48-.07 1.48-.604 1.689-1.187.21-.584.21-1.084.146-1.187-.063-.104-.23-.167-.48-.293z"/>
+    </svg>
+    <span>How can I help you?</span>
+  </a>
+</footer>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
